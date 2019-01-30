@@ -3,3 +3,14 @@
 ---
 @import  "minima";
 @import "hero";
+main {
+  height: 100%;
+}
+
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.5;
+}
