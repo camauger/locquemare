@@ -1,16 +1,13 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+$head-font: 'Stalinist One', cursive;
+//$head-font: 'Rubik', sans-serif;
+//$main-font: 'Roboto', sans-serif;
+$main-font: 'Open Sans', sans-serif;
+$fate-font: 'Fate Core Font';
+$head-font: 'Stalinist One', cursive;
+
 @import  "minima";
 @import "hero";
-main {
-  height: 100%;
-}
-
-footer {
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  opacity: 0.5;
-}
+@import "text";

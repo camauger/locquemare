@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Fate Core Font';
+  /* Safari, Android, iOS */
+  src: url("Fate Core Font.ttf") format('truetype'),;
+}
+
+
+
+body {
+  font-family: $main-font;
+  font-size: 18px;
+  opacity: 0.92;
+}
+
+article {
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $head-font;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h1 {}
+
+h2 {
+  border-bottom: 1px solid black;
+}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+p {
+  line-height: 1.5;
+}
+
+ol,
+ul {}
+
+ul {
+  list-style: disclosure-closed;
+}
+
+li {}
+
+i {
+  font-family: $fate-font;
+  font-style: normal;
+  vertical-align: bottom;
+  padding-right: 20px;
+}
+
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+blockquote {
+  padding-left: 20px;
+  border-left: 2px solid grey;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: grey;
+  font-size: 18px;
+  font-style: normal;
+}
+
+figure {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media (min-width: 1200px) {
+    margin-left: -120px;
+    margin-right: -120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 1400px) {
+    margin-left: -160px;
+    margin-right: -160px;
+  }
+}
