@@ -4,17 +4,13 @@
   src: url("Fate Core Font.ttf") format('truetype'),;
 }
 
-
-
 body {
   font-family: $main-font;
   font-size: 18px;
   opacity: 0.92;
 }
 
-article {
-
-}
+article {}
 
 h1,
 h2,
@@ -32,6 +28,8 @@ h1 {}
 
 h2 {
   border-bottom: 1px solid black;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h3 {}
@@ -63,6 +61,19 @@ i {
 section {
   margin-top: 40px;
   margin-bottom: 40px;
+  @media (min-width: 1200px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  > p:first-of-type {
+    @media (min-width: 1200px) {
+      background: lightgrey;
+      padding: 20px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
 }
 
 blockquote {
@@ -79,10 +90,7 @@ figure {
   margin-top: 30px;
   margin-bottom: 30px;
   @media (min-width: 1200px) {
-    margin-left: -120px;
-    margin-right: -120px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 40px -120px;
   }
   @media (min-width: 1400px) {
     margin-left: -160px;
