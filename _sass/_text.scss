@@ -48,7 +48,8 @@ h4 {
 h5 {}
 
 p {
-  line-height: 1.5;
+
+
 }
 
 ol,
@@ -67,28 +68,26 @@ i {
   padding-right: 20px;
 }
 
-
-
-
 .page {
-section {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  @media (min-width: 1200px) {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-
-  > p:first-of-type {
+  section {
+    margin-top: 40px;
+    margin-bottom: 40px;
     @media (min-width: 1200px) {
-      background: lightgrey;
-      padding: 20px;
-      margin-left: -20px;
-      margin-right: -20px;
+      margin-top: 75px;
+      margin-bottom: 75px;
+    }
+
+    > p:first-of-type {
+      @media (min-width: 1200px) {
+        background: lightgrey;
+        padding: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+      }
     }
   }
 }
-}
+
 blockquote {
   padding-left: 20px;
   border-left: 2px solid grey;
@@ -103,14 +102,34 @@ figure {
   img {
     width: 100%;
   }
-
   margin-top: 30px;
   margin-bottom: 30px;
   @media (min-width: 1200px) {
     margin: 40px -120px;
   }
   @media (min-width: 1400px) {
-    margin-left: -160px;
-    margin-right: -160px;
+    margin: 40px -160px;
   }
+}
+
+div.portraits {
+  margin-top: 20px;
+  margin-bottom: 20px;
+    @media (min-width: 400px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+@media (min-width: 1400px) {
+  margin-left: -60px;
+  margin-right: -60px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+}
+
+div.portrait {
+ img {
+   width: 100%;
+ }
 }
