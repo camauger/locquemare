@@ -4,6 +4,12 @@
   src: url("Fate Core Font.ttf") format('truetype'),;
 }
 
+/* Couleurs */
+$burgundy: #800020;
+$blue: #006080;
+$green: #008020;
+$darkbrown: #654321;
+
 body {
   font-family: $main-font;
   font-size: 18px;
@@ -132,4 +138,58 @@ div.portrait {
  img {
    width: 100%;
  }
+}
+
+/* Suivi des versions */
+.v1-1 {
+  color: $darkbrown;
+}
+
+.site-title {
+  text-transform: uppercase;
+  @media (min-width: 700px) {
+    font-family: $head-font;
+  }
+}
+
+.site-nav {
+  text-transform: uppercase;
+}
+
+section.licence {
+  padding-top: 20px;
+  border-top: 1px solid grey;
+  font-size: 15px;
+  color: grey;
+}
+
+.energie {
+  color: $blue!important;
+}
+.danger {
+  color: $burgundy!important;
+}
+
+.offrande {
+  color: $green!important;
+}
+
+.exploit {
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+dl {}
+dt {
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+}
+dd {
+  margin-bottom: 20px;
+}
+
+blockquote.lyrics {
+  
 }
