@@ -2,13 +2,15 @@
     .image-gallery {
         overflow: auto;
         margin-left: -1% !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
     }
 
     .image-gallery li {
         float: left;
         display: block;
         margin: 0 0 1% 1%;
-        width: 19%;
+        width: auto;
     }
 
     .image-gallery li a {
@@ -27,14 +29,26 @@
 
     .image-gallery li a img {
         width: 100%;
+    
         display: block;
     }
 </style>
 
-<ul class="image-gallery">{% for file in site.static_files %}{% if file.path contains include.folder %}{% if
-    file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.jpg' or file.extname == '.JPEG' %}{% assign
-    filenameparts = file.path | split: "/" %}{% assign filename = filenameparts | last | replace: file.extname,"" %}<li>
-        <a href="{{ file.path | relative_url }}" title="{{ filename }}"><img
-                src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}{{ file.path | relative_url }}&w=300&h=300&output=jpg&q=50&t=square"
-                alt="{{ filename }}" title="{{ filename }}" /><span>{{ filename }}</span></a></li>{% endif %}{% endif
-    %}{% endfor %}</ul>
+
+    {% assign images = site.static_files | where: "gallery", true %}
+<!-- <ul class="image-gallery">
+  {% for img in images %}
+    <li><a href="{{ img.path }}" title="{{ img.basename }}" class="img">
+        <img src="{{ img.path }}" alt="{{ img.basename }}" />
+        <span>{{ img.basename }}</span>
+    </a></li>
+  {% endfor %}
+</ul> -->
+<ul class="image-gallery">
+    {% for img in images %}
+      <li><a href="{{ img.path }}" title="{{ img.basename }}" class="img">
+          <img src="{{ img.path }}" alt="{{ img.basename }}" />
+          
+      </a></li>
+    {% endfor %}
+  </ul>

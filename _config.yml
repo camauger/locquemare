@@ -19,7 +19,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Campagne de jeu de rôle dans un futur lointain
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ludomancienJDR
 github_username:  camauger
 
 # Build settings
@@ -32,6 +31,12 @@ google_analytics: UA-136782675-1
 sass:
     sass_dir: _sass
     style: compressed
+defaults:
+  -
+    scope:
+      path: "gallery"
+    values:
+      gallery: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
