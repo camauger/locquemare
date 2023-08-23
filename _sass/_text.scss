@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Fate Core Font';
   /* Safari, Android, iOS */
-  src: url("Fate Core Font.ttf") format('truetype'),;
+  src: url("Fate Core Font.ttf") format('truetype'), ;
 }
 
 /* Couleurs */
@@ -9,6 +9,10 @@ $burgundy: #800020;
 $blue: #006080;
 $green: #008020;
 $darkbrown: #654321;
+$grey: #e8e8e8;
+$lightgrey: #f8f8f8;
+$darkgrey: #a8a8a8;
+
 
 body {
   font-family: $main-font;
@@ -25,9 +29,11 @@ h4,
 h5,
 h6 {
   font-family: $main-font;
+
   @media (min-width: 900px) {
     font-family: $head-font;
   }
+
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1.25;
@@ -53,10 +59,7 @@ h4 {
 
 h5 {}
 
-p {
-
-
-}
+p {}
 
 ol,
 ul {}
@@ -71,21 +74,21 @@ i {
   font-family: $fate-font;
   font-style: normal;
   vertical-align: bottom;
-  padding-right: 20px;
 }
 
 .page {
   section {
     margin-top: 40px;
     margin-bottom: 40px;
+
     @media (min-width: 1200px) {
       margin-top: 75px;
       margin-bottom: 75px;
     }
 
-    > p:first-of-type {
+    >p:first-of-type {
       @media (min-width: 1200px) {
-        background: lightgrey;
+        background: $grey;
         padding: 20px;
         margin-left: -20px;
         margin-right: -20px;
@@ -108,11 +111,14 @@ figure {
   img {
     width: 100%;
   }
+
   margin-top: 30px;
   margin-bottom: 30px;
+
   @media (min-width: 1200px) {
     margin: 40px -120px;
   }
+
   @media (min-width: 1400px) {
     margin: 40px -160px;
   }
@@ -121,32 +127,30 @@ figure {
 div.portraits {
   margin-top: 20px;
   margin-bottom: 20px;
-    @media (min-width: 400px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 20px;
-    }
-@media (min-width: 1400px) {
-  margin-left: -60px;
-  margin-right: -60px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
+
+  @media (min-width: 400px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  @media (min-width: 1400px) {
+    margin-left: -60px;
+    margin-right: -60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 div.portrait {
- img {
-   width: 100%;
- }
-}
-
-/* Suivi des versions */
-.v1-1 {
-  color: $darkbrown;
+  img {
+    width: 100%;
+  }
 }
 
 .site-title {
   text-transform: uppercase;
+
   @media (min-width: 700px) {
     font-family: $head-font;
   }
@@ -166,35 +170,70 @@ section.licence {
   color: grey;
 }
 
-section.contact {}
-
-.energie {
-  color: $blue!important;
+section {
+  padding-top: 20px;
 }
+
 .danger {
-  color: $burgundy!important;
+  color: black;
 }
 
-.offrande {
-  color: $green!important;
-}
-
+.offrande,
+.energie,
 .exploit {
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
 
 dl {}
+
 dt {
   font-weight: bold;
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
 }
+
 dd {
   margin-bottom: 20px;
 }
 
-blockquote.lyrics {
+blockquote.lyrics {}
 
+nav.sommaire {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    background-color: $grey;
+    margin: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+  }
+}
+
+p.action {
+  display: flex;
+  align-items: center;
+
+  i {
+    font-size: 30px;
+  }
 }
