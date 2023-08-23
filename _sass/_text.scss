@@ -201,7 +201,13 @@ dd {
 
 blockquote.lyrics {}
 
-nav.sommaire {
+
+.sommaire h2 {
+  @media (min-width: 1300px) {
+    display: none;
+  }
+}
+.sommaire nav {
 
   margin-top: 20px;
   margin-bottom: 20px;

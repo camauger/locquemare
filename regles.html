@@ -6,56 +6,27 @@ permalink: regles.html
 <span>Propulsées par Fate - version 2.0</span>
 <span>Inspirations complémentaires : Uprising, Spire: The City Must Fall</span>
 <span>Août 2023</span>
-<section>
+<section class="sommaire" id="sommaire">
   <h2>Sommaire</h2>
-  <nav class="sommaire">
+  <nav>
     <a href="#materiel">Matériel nécessaire</a>
     <a href="#narration">Une narration à trois niveaux</a>
     <a href="#personnage">Création de personnage</a>
     <a href="#agir">Agir</a>
     <a href="#archetypes">Archétypes</a>
     <a href="#secrets">Les secrets</a>
-
   </nav>
 </section>
 
-
 <section id="materiel">
-  <h2>Matériel nécessaire</h2>
+  {% include materiel.html %}
+</section>
 
-  <ul>
-    <li>Des jetons blancs et noirs</li>
-    <li>Des dés FATE, 4 par joueur</li>
-    <li>Des dés à 6 et 10 faces</li>
-    <li>Des cartes de papier vierges pour écrire les clés</li>
-  </ul>
+<section>
+  {% include gallery.html folder="/assets/album" %}
 </section>
 <section id="narration">
-
-  <h2>Une narration à trois niveaux</h2>
-
-  <p>L'histoire qui va se dérouler est forgée par trois niveaux de narration&nbsp;: les <strong>Héros</strong>, qui sont
-    les personnages principaux, l'<strong>Adversité</strong>, qui va créer des embûches pour les <strong>Héros</strong>,
-    et le
-    <strong>Choeur</strong>,
-    qui va intervenir lorsqu'il est nécessaire de faire des liens, d'arbitrer des situations ou tout simplement fournir
-    des informations complémentaires.
-  </p>
-
-  <h3>Le Héros</h3>
-  <p>Tu es un <strong>Héros</strong>. D'autres joueurs le sont également. Ce sont tes <strong>Alliés</strong>.
-    Un joueur est l'<strong>Adversité</strong>.
-    Tous ensemble vous êtes le <strong>Choeur</strong>.</p>
-
-  <h3>Le Choeur</h3>
-  <p>Le Choeur, c'est l'ensemble des participants. Le Choeur intervient lorsqu'il est nécessaire de clarifier des
-    aspects de l'histoire, d'arbitrer ou de trouver un consensus. Le plus souvent, le Choeur intervient pour orienter la
-    trame narrative.</p>
-
-  <h3>L'Adversité</h3>
-  <p>L'un des participants ne joue pas de héros, mais représente l'Adversité. Ce n'est pas ton ennemi. L'Adversité tire
-    les ficelles des intrigues. Elle interprète tous les personnages qui ne sont pas des héros. Elle crée des situations
-    conflictuelles. Elle aide les héros à se dépasser.</p>
+  {% include narration.html %}
 </section>
 <section id="personnage">
   <h2>Création de personnage</h2>
@@ -138,54 +109,9 @@ permalink: regles.html
   <p>Une fois par session, tu peux dépenser 1 exploit pour changer une de tes clés, révélant la vérité. Tu obtiens 2
     activations gratuites de cet aspect au moment de la révélation.</p>
 
-
-  <div class="portraits">
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1552741585/locquemare/21e9468604a9cc9e5f5ac2fd37228fbb.jpg"
-        alt="">
-    </div>
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1552741585/locquemare/829498529981509de96a0c8610c88f20.jpg"
-        alt="">
-    </div>
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1552741585/locquemare/0b49e3fe1f148e2491367dbf5899a66a.jpg"
-        alt="">
-    </div>
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1553100139/locquemare/glaive-f.jpg"
-        alt="">
-    </div>
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1552741585/locquemare/fa92f8ab4b7799e781abb67646f4832e.jpg"
-        alt="">
-    </div>
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1552741585/locquemare/5898c25dfc3a8a92649b864d6c1e0b7c.jpg"
-        alt="">
-    </div>
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1553100139/locquemare/gardien.jpg"
-        alt="">
-    </div>
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1553100139/locquemare/traqueur-f.jpg"
-        alt="">
-    </div>
-    <div class="portrait">
-      <img
-        src="https://res.cloudinary.com/dmd9v4pth/image/upload/w_200,ar_1:1,c_fill,g_auto/v1553100139/locquemare/traqueur-m.jpg"
-        alt="">
-    </div>
-  </div>
+</section>
+<section id="portraits">
+  {% include portraits.html %}
 </section>
 <section id="archetypes">
   <h2>Archétypes</h2>
@@ -284,10 +210,10 @@ permalink: regles.html
 
     <li><strong>Décide du type d’action entreprise</strong>
       <p>Tu as le choix entre 4 types d'action. Tu peux également renoncer à ton action pour aider un allié.</p>
-      <p class="action"><i>c</i> Créer un avantage</p>
-      <p class="action"><i>o</i> Surmonter un obstacle</p>
-      <p class="action"><i>a</i> Attaquer</p>
-      <p class="action"><i>d</i> Défendre</p>
+      <a href="#avantage" class="action"><i>c</i> Créer un avantage</a>
+      <a href="#obstacle" class="action"><i>o</i> Surmonter un obstacle</a>
+      <a href="#attaquer" class="action"><i>a</i> Attaquer</a>
+      <a href="#defendre" class="action"><i>d</i> Défendre</a>
 
     </li>
     <li>
@@ -396,7 +322,7 @@ permalink: regles.html
   une activation. Un élan est représentée en jeu par une carte, comme une clé, ou par un simple jeton. Les <strong
     class="energie">jetons d'énergie</strong> devraient être utilisés pour les <strong>élans</strong>.
 
-  <h3><i>c</i>Créer un avantage</h3>
+  <h3 id="avantage"><i>c</i>Créer un avantage</h3>
 
   <p>L’action de <strong>créer un avantage</strong> couvre tout ce qu’il est possible de faire pour se mettre ou mettre
     un Allié en position avantageuse.</p>
@@ -467,7 +393,7 @@ permalink: regles.html
     <li>tu gagnes deux activations gratuites de la <strong>clé</strong>.</li>
   </ul>
 
-  <h3><i>o</i>Surmonter un obstacle</h3>
+  <h3 id="obstacle"><i>o</i>Surmonter un obstacle</h3>
   <p>Tu dois <strong>surmonter un obstacle</strong> lorsque quelque chose t'empêche d'atteindre ton but&nbsp;: crocheter
     une serrure, se libérer de liens, sauter au-dessus d’un gouffre, etc. Éliminer ou modifier une clé de situation
     gênante est habituellement une action de surmonter un obstacle.</p>
@@ -496,7 +422,7 @@ permalink: regles.html
     <li>Ton action est réussie et tu gagnes un <strong>élan</strong>.</li>
   </ul>
 
-  <h3><i>a</i>Attaquer</h3>
+  <h3 id="attaquer"><i>a</i>Attaquer</h3>
   <p>Parfois, tu veux blesser quelqu'un, physiquement ou mentalement. Alors tu choisis d'<strong>attaquer</strong>.
     Frapper avec une épée, tirer au fusil ou hurler des insultes pour déstabiliser ton adversaire sont des attaques.</p>
 
@@ -535,7 +461,7 @@ permalink: regles.html
     <li>Tu peux également réduire les dégâts de 1 point pour obtenir un <strong>élan</strong>.</li>
   </ul>
 
-  <h3><i>d</i>Défendre</h3>
+  <h3 id="defendre"><i>d</i>Défendre</h3>
 
   <p><strong>Se défendre</strong>, c'est s'opposer activement à une action entreprise par l'Adversité
     (l'Adversité ne fait pas de jets d'attaque, ce sont les <strong>héros</strong> qui font tous les jets de dés).</p>
@@ -1112,7 +1038,7 @@ permalink: regles.html
   <p>À la fin d'un <strong>acte</strong>, tu reçois un point d'évolution. À la fin d'un <strong>scénario</strong>, tu
     reçois un point d'évolution supplémentaire.</p>
   <p>Tu reçois également des points d'évolution en cours de session, en fonction de tes actions.</p>
-  
+
   <ul>
     <li>J'ai tué quelqu'un sans être détecté</li>
     <li>J'ai éliminé toutes les preuves de mes actions</li>
@@ -1130,8 +1056,8 @@ permalink: regles.html
     <li>J'ai fait une découverte</li>
 
   </ul>
-  
-  
+
+
   <p>À la fin d'une session, le Choeur doit prendre un moment pour allouer des points d'évolution pour les personnages.
   </p>
 
@@ -1155,6 +1081,8 @@ permalink: regles.html
 
 <section>
   <h2>Utilisation du Edge Die (Dé d'Avantage) à la place du +2 de Fate Point</h2>
-<p> Dans Locquemare, les joueurs peuvent utiliser un Edge Die au lieu du bonus traditionnel de +2 lorsqu'ils dépensent un Fate Point. Le Edge Die peut être un d4, d6, d8, etc., et son résultat s'ajoute au total des dés, ajoutant une couche de risque et de récompense à l'utilisation des Fate Points.</p>
+  <p> Dans Locquemare, les joueurs peuvent utiliser un Edge Die au lieu du bonus traditionnel de +2 lorsqu'ils dépensent
+    un Fate Point. Le Edge Die peut être un d4, d6, d8, etc., et son résultat s'ajoute au total des dés, ajoutant une
+    couche de risque et de récompense à l'utilisation des Fate Points.</p>
 
 </section>
