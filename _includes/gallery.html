@@ -1,4 +1,6 @@
 <style>
+
+
     .image-gallery {
         overflow: auto;
         margin-left: -1% !important;
@@ -26,43 +28,44 @@
 
         }
     }
-        @media (min-width: 1300px) {
-            .image-gallery {
-                overflow: auto;
-                margin-left: -1% !important;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
 
-            }
-        }
-
-        .image-gallery li {
-            float: left;
-            display: block;
-            margin: 0 0 20px 1%;
-            width: auto;
-        }
-
-        .image-gallery li a {
-            text-align: center;
-            text-decoration: none !important;
-            color: #777;
-        }
-
-        .image-gallery li a span {
-            display: block;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 3px 0;
-        }
-
-        .image-gallery li a img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
+    @media (min-width: 1300px) {
+        .image-gallery {
+            overflow: auto;
+            margin-left: -1% !important;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
 
         }
+    }
+
+    .image-gallery li {
+        float: left;
+        display: block;
+        margin: 0 0 20px 1%;
+        width: auto;
+    }
+
+    .image-gallery li a {
+        text-align: center;
+        text-decoration: none !important;
+        color: #777;
+    }
+
+    .image-gallery li a span {
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 3px 0;
+    }
+
+    .image-gallery li a img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+
+    }
 </style>
 
 
@@ -70,11 +73,13 @@
 
 <ul class="image-gallery">
     {% for img in images %}
-    <li><a href="{{ img.path }}" title="{{ img.basename }}" class="img">
+    <li><a href="{{img.path}}" title="{{ img.basename }}" class="img">
             <img src="{{ img.path }}" alt="{{ img.basename }}" />
-
+            <span>{{ img.basename }}</span>
         </a></li>
 
 
     {% endfor %}
 </ul>
+
+<script src="{{ base.url | prepend: site.url }}/assets/script.js"></script>.
